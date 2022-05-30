@@ -11,16 +11,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.5:8093/product/v1/allproduct",
+					"raw": "http://localhost:8099/gateway/product/v1/allproduct",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"5"
+						"localhost"
 					],
-					"port": "8093",
+					"port": "8099",
 					"path": [
+						"gateway",
 						"product",
 						"v1",
 						"allproduct"
@@ -30,13 +28,13 @@
 			"response": []
 		},
 		{
-			"name": "Registrar cliente personal con producto pasivo ahorro",
+			"name": "Registrar Producto",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d233bb9de122e044c64\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"inter_bank_account\": \"00254787845789865487\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0\r\n    }\r\n}",
+					"raw": "{\r\n    \"product\": {\r\n        \"description\": \"tarjeta de debito\",\r\n        \"category\": \"pasivo\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -44,7 +42,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8099/gateway/client/v1/saveclient",
+					"raw": "http://localhost:8099/gateway/product/v1/saveproduct",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -52,9 +50,32 @@
 					"port": "8099",
 					"path": [
 						"gateway",
-						"client",
+						"product",
 						"v1",
-						"saveclient"
+						"saveproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8099/gateway/product/v1/deleteclient/629188de34033978a275432e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"product",
+						"v1",
+						"deleteclient",
+						"629188de34033978a275432e"
 					]
 				}
 			},
@@ -119,7 +140,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8099/gateway/client/v1/deleteclient/628b1533e2e0fc3584eee7d7",
+					"raw": "http://localhost:8099/gateway/client/v1/deleteclient/6292eb1ecd3393418bd79baa",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -130,7 +151,38 @@
 						"client",
 						"v1",
 						"deleteclient",
-						"628b1533e2e0fc3584eee7d7"
+						"6292eb1ecd3393418bd79baa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar cliente personal con producto pasivo ahorro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d233bb9de122e044c64\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"inter_bank_account\": \"00254787845789865487\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 2,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/client/v1/saveclient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"client",
+						"v1",
+						"saveclient"
 					]
 				}
 			},
@@ -143,7 +195,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d413bb9de122e044c66\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898333\",\r\n        \"inter_bank_account\": \"00254787845789861111\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0\r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d413bb9de122e044c66\",\r\n        \"cash\": 400.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898223\",\r\n        \"inter_bank_account\": \"00254787845789861221\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 1,\r\n        \"deposit_date\": \"27-05-2022\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -174,7 +226,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898333\",\r\n        \"inter_bank_account\": \"00254787845789861111\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0 \r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 100.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457894444\",\r\n        \"inter_bank_account\": \"00254787845789864141\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -205,7 +257,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Carlos\",\r\n    \"lastname\": \"Zegarra\",\r\n    \"dni\": \"78986545\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898655\",\r\n        \"inter_bank_account\": \"00254787845789861199\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0\r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Carlos\",\r\n    \"lastname\": \"Zegarra\",\r\n    \"dni\": \"78986545\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 500.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898888\",\r\n        \"inter_bank_account\": \"00254787845789861100\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -236,7 +288,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Maribel\",\r\n    \"lastname\": \"Soldeño\",\r\n    \"dni\": \"78986588\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"autorizado\",\r\n        \"bank_account\": \"478547878457898655\",\r\n        \"inter_bank_account\": \"00254787845789861199\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0\r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Maribel\",\r\n    \"lastname\": \"Soldeño\",\r\n    \"dni\": \"78986588\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 500.00,\r\n        \"modality\": \"autorizado\",\r\n        \"bank_account\": \"478547878457898888\",\r\n        \"inter_bank_account\": \"00254787845789861100\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -267,7 +319,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Salvador\",\r\n    \"lastname\": \"Roma\",\r\n    \"dni\": \"78987878\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d533bb9de122e044c67\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"-\",\r\n        \"inter_bank_account\": \"-\",\r\n        \"company\": \"-\",\r\n        \"credit\": 24000.00,\r\n        \"fee\": \"12 meses\",\r\n        \"payperfee\": 2000.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0 \r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Salvador\",\r\n    \"lastname\": \"Roma\",\r\n    \"dni\": \"78987777\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d533bb9de122e044c67\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"-\",\r\n        \"inter_bank_account\": \"-\",\r\n        \"company\": \"-\",\r\n        \"credit\": 24000.00,\r\n        \"fee\": \"12 meses\",\r\n        \"payperfee\": 2000.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"25-05-2022\",\r\n        \"count_overdue_installments\": 1,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -298,7 +350,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Ramon\",\r\n    \"lastname\": \"Rojas\",\r\n    \"dni\": \"78889977\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d5c3bb9de122e044c68\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"-\",\r\n        \"inter_bank_account\": \"-\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 24000.00,\r\n        \"fee\": \"12 meses\",\r\n        \"payperfee\": 2000.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0 \r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Ramon\",\r\n    \"lastname\": \"Rojas\",\r\n    \"dni\": \"78881127\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d5c3bb9de122e044c68\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"-\",\r\n        \"inter_bank_account\": \"-\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 24000.00,\r\n        \"fee\": \"12 meses\",\r\n        \"payperfee\": 2000.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"27-04-2022\",\r\n        \"count_overdue_installments\": 2,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -329,7 +381,100 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Ramona\",\r\n    \"lastname\": \"Lomas\",\r\n    \"dni\": \"78884444\",\r\n    \"type\": \"empresarial\",\r\n    \"product\": {\r\n        \"id\": \"62853d6b3bb9de122e044c69\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"\",\r\n        \"inter_bank_account\": \"\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 24000.00,\r\n        \"fee\": \"\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"4555-4444-4444-4444\",\r\n        \"ccv\": \"444\",\r\n        \"expiration_date\": \"12/2025\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0  \r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Juana\",\r\n    \"lastname\": \"Horcara\",\r\n    \"dni\": \"78945678\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"62853d6b3bb9de122e044c69\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"-\",\r\n        \"inter_bank_account\": \"-\",\r\n        \"company\": \"-\",\r\n        \"credit\": 2000.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"4555-4444-4444-4444\",\r\n        \"ccv\": \"444\",\r\n        \"expiration_date\": \"12/2025\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/client/v1/saveclient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"client",
+						"v1",
+						"saveclient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar cliente VIP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juana\",\r\n    \"lastname\": \"Horcara\",\r\n    \"dni\": \"78945678\",\r\n    \"type\": \"VIP\",\r\n    \"product\": {\r\n        \"id\": \"62853d233bb9de122e044c64\",\r\n        \"cash\": 5000.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898666\",\r\n        \"inter_bank_account\": \"00254787845789865666\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 400.00,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"limit_transaction\": 3,\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/client/v1/saveclient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"client",
+						"v1",
+						"saveclient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar PYME",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juana\",\r\n    \"lastname\": \"Horcara\",\r\n    \"dni\": \"78945678\",\r\n    \"type\": \"PYME\",\r\n    \"product\": {\r\n        \"id\": \"62853d353bb9de122e044c65\",\r\n        \"cash\": 5000.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457894848\",\r\n        \"inter_bank_account\": \"00254787845789869999\",\r\n        \"company\": \"NTTDATA\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"limit_transaction\": 0,\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/client/v1/saveclient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"client",
+						"v1",
+						"saveclient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar cliente Débito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"629189ef34033978a275432f\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"inter_bank_account\": \"00254787845789865487\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"4555-4444-4444-8888\",\r\n        \"ccv\": \"441\",\r\n        \"expiration_date\": \"12/2025\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": [\r\n            {\r\n                \"account\": \"478547878457898223\",\r\n                \"inter_account\": \"00254787845789861221\"\r\n            },\r\n                        {\r\n                \"account\": \"478547878457894444\",\r\n                \"inter_account\": \"00254787845789864141\"\r\n            }\r\n        ]\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -359,7 +504,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8099/gateway/movements/v1/allmovementsbyid/628b308be2e0fc3584eee7d8/62853d233bb9de122e044c64",
+					"raw": "http://localhost:8099/gateway/movements/v1/allmovementsbyid/6292c9d0cd3393418bd79ba4/62853d353bb9de122e044c65",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -370,39 +515,8 @@
 						"movements",
 						"v1",
 						"allmovementsbyid",
-						"628b308be2e0fc3584eee7d8",
-						"62853d233bb9de122e044c64"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Registrar un depósito o retiro de una cuenta bancaria con límite de transaccion",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"628b308be2e0fc3584eee7d8\",\r\n        \"fullname\": \"Jose Diestra\",\r\n        \"idproduct\": \"62853d233bb9de122e044c64\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"credit_card\": \"-\",\r\n        \"type\": \"D\",\r\n        \"amount\": 4550,\r\n        \"destination\": \"478547878457898655\",\r\n        \"date\": \"20-05-2022\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8099/gateway/movements/v1/savemovements",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8099",
-					"path": [
-						"gateway",
-						"movements",
-						"v1",
-						"savemovements"
+						"6292c9d0cd3393418bd79ba4",
+						"62853d353bb9de122e044c65"
 					]
 				}
 			},
@@ -431,12 +545,83 @@
 			"response": []
 		},
 		{
+			"name": "Reporte de comisiones por rango de fechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/getcommissionsperrange/62853d353bb9de122e044c65/19-05-2022/30-05-2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"getcommissionsperrange",
+						"62853d353bb9de122e044c65",
+						"19-05-2022",
+						"30-05-2022"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte saldo promedio diario mensual de un cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/getaveragebalance/6292c9d0cd3393418bd79ba4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"getaveragebalance",
+						"6292c9d0cd3393418bd79ba4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte 10 ultimos movimientos con productos de tarjeta débito y crédito",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/gettenmovements/6292c9d0cd3393418bd79ba4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"gettenmovements",
+						"6292c9d0cd3393418bd79ba4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Borrar Movimientos por ID",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8099/gateway/movements/v1/deletedetail/628b407e8c91785d00dc82ec",
+					"raw": "http://localhost:8099/gateway/movements/v1/deletedetail/6292d8709daa5a31604b6f85",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -447,67 +632,7 @@
 						"movements",
 						"v1",
 						"deletedetail",
-						"628b407e8c91785d00dc82ec"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Registrar pagos de créditos",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"62859d15223c3e4094924723\",\r\n        \"fullname\": \"Ramon Rojas\",\r\n        \"idproduct\": \"62853d5c3bb9de122e044c68\",\r\n        \"bank_account\": \"-\",\r\n        \"type\": \"PC\",\r\n        \"credit_card\": \"-\",\r\n        \"amount\": 4550,\r\n        \"destination\": \"62853d5c3bb9de122e044c68-credit\",\r\n        \"date\": \"19-05-2022\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8086/movements/v1/savemovements",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8086",
-					"path": [
-						"movements",
-						"v1",
-						"savemovements"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Cargar consumos a tarjetas de crédito",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"62859d1a223c3e4094924724\",\r\n        \"fullname\": \"Ramona Lomas\",\r\n        \"idproduct\": \"62853d6b3bb9de122e044c69\",\r\n        \"credit_card\": \"4555-4444-4444-4444\",\r\n        \"bank_account\": \"-\",\r\n        \"type\": \"CCC\",\r\n        \"amount\": 100,\r\n        \"destination\": \"62853d5c3bb9de122e044c68-credit\",\r\n        \"date\": \"19-05-2022\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8086/movements/v1/savemovements",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8086",
-					"path": [
-						"movements",
-						"v1",
-						"savemovements"
+						"6292d8709daa5a31604b6f85"
 					]
 				}
 			},
@@ -520,7 +645,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"movements\":{\r\n        \"id\": \"628b36a88c91785d00dc82e8\",\r\n        \"idcliente\": \"628b308be2e0fc3584eee7d8\",\r\n        \"fullname\": \"Jose Diestra 2\",\r\n        \"idproduct\": \"62853d233bb9de122e044c64\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"credit_card\": \"-\",\r\n        \"type\": \"D\",\r\n        \"amount\": 4551,\r\n        \"destination\": \"478547878457898654\",\r\n        \"date\": \"18-05-2022\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"movements\": {\r\n            \"id\": \"6292da42b2533647ce28d710\",\r\n            \"idcliente\": \"6292c9d0cd3393418bd79ba4\",\r\n            \"iddetail\": \"23edf891-40f3-4f90-b28b-99a83e8c4f9f\",\r\n            \"fullname\": \"Jose Diestra\",\r\n            \"idproduct\": \"62853d353bb9de122e044c65\",\r\n            \"bank_account\": \"478547878457898654\",\r\n            \"credit_card\": \"-\",\r\n            \"type\": \"D\",\r\n            \"amount\": 10.00,\r\n            \"destination\": \"478547878457898654\",\r\n            \"date\": \"20-05-2022\",\r\n            \"pay_commission\": false,\r\n            \"amount_commission\": 0.0\r\n        }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -545,12 +670,21 @@
 			"response": []
 		},
 		{
-			"name": "Reporte de comisiones por rango de fechas",
+			"name": "Registrar un depósito a una misma cuenta bancaria",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"6293fff2e67c141cf04875de\",\r\n        \"iddetail\": \"79ae61df-3cc6-495d-bb0b-1b470a525fb0\",\r\n        \"fullname\": \"Jose Diestra\",\r\n        \"idproduct\": \"62853d353bb9de122e044c65\",\r\n        \"bank_account\": \"478547878457894444\",\r\n        \"credit_card\": \"-\",\r\n        \"type\": \"D\",\r\n        \"amount\": 10.00,\r\n        \"destination\": \"478547878457894444\",\r\n        \"date\": \"20-05-2022\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8099/gateway/movements/v1/getcommissionsperrange/62853d233bb9de122e044c64/19-05-2022/20-05-2022",
+					"raw": "http://localhost:8099/gateway/movements/v1/savemovements",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -560,10 +694,131 @@
 						"gateway",
 						"movements",
 						"v1",
-						"getcommissionsperrange",
-						"62853d233bb9de122e044c64",
-						"19-05-2022",
-						"20-05-2022"
+						"savemovements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Depósito a otra cuenta del mismo cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"6293fff2e67c141cf04875de\",\r\n        \"iddetail\": \"79ae61df-3cc6-495d-bb0b-1b470a525fb0\",\r\n        \"fullname\": \"Jose Diestra\",\r\n        \"idproduct\": \"62853d353bb9de122e044c65\",\r\n        \"bank_account\": \"478547878457894444\",\r\n        \"credit_card\": \"-\",\r\n        \"type\": \"T\",\r\n        \"amount\": 10.00,\r\n        \"destination\": \"478547878457898654\",\r\n        \"date\": \"27-05-2022\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/savemovements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"savemovements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar pagos de créditos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"629406be748a356b955032bd\",\r\n        \"iddetail\": \"66d2d75b-e60c-4c74-bc9f-8c6fc72faf83\",\r\n        \"fullname\": \"Salvador Roma\",\r\n        \"idproduct\": \"62853d533bb9de122e044c67\",\r\n        \"bank_account\": \"-\",\r\n        \"type\": \"PC\",\r\n        \"credit_card\": \"-\",\r\n        \"amount\": 2000,\r\n        \"destination\": \"62853d533bb9de122e044c67-credit\",\r\n        \"date\": \"19-05-2022\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/savemovements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"savemovements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cargar consumos a tarjetas de crédito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"629406c3748a356b955032bf\",\r\n        \"iddetail\": \"f089ad03-aa4e-499e-aa61-f6b88d8184f2\",\r\n        \"fullname\": \"Juana Horcara\",\r\n        \"idproduct\": \"62853d6b3bb9de122e044c69\",\r\n        \"credit_card\": \"4555-4444-4444-4444\",\r\n        \"bank_account\": \"-\",\r\n        \"type\": \"CCC\",\r\n        \"amount\": 100,\r\n        \"destination\": \"62853d6b3bb9de122e044c69-credit\",\r\n        \"date\": \"22-05-2022\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/savemovements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"savemovements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar  pagos de créditos de terceros mediante una tarjeta de débito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movements\":{\r\n        \"idcliente\": \"6293fff2e67c141cf04875de\",\r\n        \"iddetail\": \"dc187e62-c29d-42f8-bf07-715dfd287ab2\",\r\n        \"fullname\": \"Jose Diestra\",\r\n        \"idproduct\": \"629189ef34033978a275432f\",\r\n        \"credit_card\": \"4555-4444-4444-8888\",\r\n        \"bank_account\": \"-\",\r\n        \"type\": \"PCTD\",\r\n        \"amount\": 1,\r\n        \"destination\": \"946f8647-5938-42d5-affa-c1789eaa14af\",\r\n        \"date\": \"28-05-2022\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/gateway/movements/v1/savemovements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"gateway",
+						"movements",
+						"v1",
+						"savemovements"
 					]
 				}
 			},
