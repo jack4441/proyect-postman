@@ -823,6 +823,96 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Registrar Yanqui con tarjeta de débito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileWallet\": {\r\n        \"doc_id\": \"78945612\",\r\n        \"movil\": \"987458545\",\r\n        \"imei\": \"456898eweasdsad45\",\r\n        \"email\": \"test@gmail.com\",\r\n        \"cash\": 0.00,\r\n        \"iddetail\": \"dc187e62-c29d-42f8-bf07-715dfd287ab2\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/wallet/v1/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"wallet",
+						"v1",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Yanqui Transferencia con el emisor y receptor registrados con tarjetas de débito.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messageTransactWallet\": {\r\n        \"amount\": 1.00,\r\n        \"iddetail\": \"dc187e62-c29d-42f8-bf07-715dfd287ab2\",\r\n        \"number_destination\": \"\",\r\n        \"destination\": \"478547878457898787\"\r\n    },\r\n    \"id\": \"629a529f74ee1235bf71638d\",\r\n    \"doc_id\": \"78945612\",\r\n    \"movil\": \"987458545\",\r\n    \"imei\": \"456898eweasdsad45\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"cash\": 0.0,\r\n    \"type\": \"TCD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/wallet/v1/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"wallet",
+						"v1",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Yanqui",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileWallet\": {\r\n        \"doc_id\": \"78545555\",\r\n        \"movil\": \"987458666\",\r\n        \"imei\": \"456898eweasdsad45\",\r\n        \"email\": \"test2@gmail.com\",\r\n        \"cash\": 400.00,\r\n        \"iddetail\": \"-\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/wallet/v1/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"wallet",
+						"v1",
+						"save"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
