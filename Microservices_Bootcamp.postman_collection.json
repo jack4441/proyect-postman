@@ -110,7 +110,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"628adeeabc21291f1ece222e\",\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"detail\": [{\r\n        \"id\": \"62853d233bb9de122e044c64\",\r\n        \"cash\": 600.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"inter_bank_account\": \"00254787845789865487\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"-\",\r\n        \"ccv\": \"-\",\r\n        \"expiration_date\": \"-\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0\r\n    }]\r\n}",
+					"raw": "{\r\n            \"id\": \"6293fff2e67c141cf04875de\",\r\n            \"name\": \"Jose\",\r\n            \"lastname\": \"Diestra\",\r\n            \"dni\": \"78945612\",\r\n            \"type\": \"personal\",\r\n            \"detail\": [\r\n                {\r\n                    \"iddetail\": \"883df67b-cca5-4b8d-9165-dac60cfe2db2\",\r\n                    \"id\": \"62853d233bb9de122e044c64\",\r\n                    \"cash\": 6.0,\r\n                    \"modality\": \"titular\",\r\n                    \"bank_account\": \"478547878457898654\",\r\n                    \"inter_bank_account\": \"00254787845789865487\",\r\n                    \"company\": \"-\",\r\n                    \"credit\": 0.0,\r\n                    \"fee\": \"-\",\r\n                    \"payperfee\": 0.0,\r\n                    \"credit_card\": \"-\",\r\n                    \"ccv\": \"-\",\r\n                    \"expiration_date\": \"-\",\r\n                    \"state\": \"active\",\r\n                    \"counter_transaction\": 2.0,\r\n                    \"balance_day\": 0.0,\r\n                    \"deposit_date\": \"-\",\r\n                    \"limit_transaction\": 2.0,\r\n                    \"payment_date\": \"-\",\r\n                    \"count_overdue_installments\": 0.0,\r\n                    \"bank_accounts\": null\r\n                },\r\n                {\r\n                    \"iddetail\": \"54630d35-87b3-4488-9212-54f09cd4fbf6\",\r\n                    \"id\": \"62853d413bb9de122e044c66\",\r\n                    \"cash\": 400.0,\r\n                    \"modality\": \"titular\",\r\n                    \"bank_account\": \"478547878457898223\",\r\n                    \"inter_bank_account\": \"00254787845789861221\",\r\n                    \"company\": \"-\",\r\n                    \"credit\": 0.0,\r\n                    \"fee\": \"-\",\r\n                    \"payperfee\": 0.0,\r\n                    \"credit_card\": \"-\",\r\n                    \"ccv\": \"-\",\r\n                    \"expiration_date\": \"-\",\r\n                    \"state\": \"active\",\r\n                    \"counter_transaction\": 0.0,\r\n                    \"balance_day\": 0.0,\r\n                    \"deposit_date\": \"27-05-2022\",\r\n                    \"limit_transaction\": 1.0,\r\n                    \"payment_date\": \"-\",\r\n                    \"count_overdue_installments\": 0.0,\r\n                    \"bank_accounts\": null\r\n                },\r\n                {\r\n                    \"iddetail\": \"79ae61df-3cc6-495d-bb0b-1b470a525fb0\",\r\n                    \"id\": \"62853d353bb9de122e044c65\",\r\n                    \"cash\": 40000.00,\r\n                    \"modality\": \"titular\",\r\n                    \"bank_account\": \"478547878457894444\",\r\n                    \"inter_bank_account\": \"00254787845789864141\",\r\n                    \"company\": \"-\",\r\n                    \"credit\": 0.0,\r\n                    \"fee\": \"-\",\r\n                    \"payperfee\": 0.0,\r\n                    \"credit_card\": \"-\",\r\n                    \"ccv\": \"-\",\r\n                    \"expiration_date\": \"-\",\r\n                    \"state\": \"active\",\r\n                    \"counter_transaction\": 8.0,\r\n                    \"balance_day\": 0.0,\r\n                    \"deposit_date\": \"-\",\r\n                    \"limit_transaction\": 0.0,\r\n                    \"payment_date\": \"-\",\r\n                    \"count_overdue_installments\": 0.0,\r\n                    \"bank_accounts\": null\r\n                },\r\n                {\r\n                    \"iddetail\": \"dc187e62-c29d-42f8-bf07-715dfd287ab2\",\r\n                    \"id\": \"629189ef34033978a275432f\",\r\n                    \"cash\": 0.0,\r\n                    \"modality\": \"titular\",\r\n                    \"bank_account\": \"478547878457898654\",\r\n                    \"inter_bank_account\": \"00254787845789865487\",\r\n                    \"company\": \"-\",\r\n                    \"credit\": 0.0,\r\n                    \"fee\": \"-\",\r\n                    \"payperfee\": 0.0,\r\n                    \"credit_card\": \"4555-4444-4444-8888\",\r\n                    \"ccv\": \"441\",\r\n                    \"expiration_date\": \"12/2025\",\r\n                    \"state\": \"active\",\r\n                    \"counter_transaction\": 0.0,\r\n                    \"balance_day\": 0.0,\r\n                    \"deposit_date\": \"-\",\r\n                    \"limit_transaction\": 0.0,\r\n                    \"payment_date\": \"-\",\r\n                    \"count_overdue_installments\": 0.0,\r\n                    \"bank_accounts\": [\r\n                        {\r\n                            \"account\": \"478547878457898223\",\r\n                            \"inter_account\": \"00254787845789861221\"\r\n                        },\r\n                        {\r\n                            \"account\": \"478547878457894444\",\r\n                            \"inter_account\": \"00254787845789864141\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -140,7 +140,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8099/gateway/client/v1/deleteclient/6292eb1ecd3393418bd79baa",
+					"raw": "http://localhost:8099/gateway/client/v1/deleteclient/629406bc748a356b955032bc",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -151,7 +151,7 @@
 						"client",
 						"v1",
 						"deleteclient",
-						"6292eb1ecd3393418bd79baa"
+						"629406bc748a356b955032bc"
 					]
 				}
 			},
@@ -474,7 +474,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastname\": \"Diestra\",\r\n    \"dni\": \"78945612\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"629189ef34033978a275432f\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"inter_bank_account\": \"00254787845789865487\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"4555-4444-4444-8888\",\r\n        \"ccv\": \"441\",\r\n        \"expiration_date\": \"12/2025\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": [\r\n            {\r\n                \"account\": \"478547878457898223\",\r\n                \"inter_account\": \"00254787845789861221\"\r\n            },\r\n                        {\r\n                \"account\": \"478547878457894444\",\r\n                \"inter_account\": \"00254787845789864141\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Carlos\",\r\n    \"lastname\": \"Zegarra\",\r\n    \"dni\": \"78986545\",\r\n    \"type\": \"personal\",\r\n    \"product\": {\r\n        \"id\": \"629189ef34033978a275432f\",\r\n        \"cash\": 0.00,\r\n        \"modality\": \"titular\",\r\n        \"bank_account\": \"478547878457898654\",\r\n        \"inter_bank_account\": \"00254787845789865487\",\r\n        \"company\": \"-\",\r\n        \"credit\": 0.00,\r\n        \"fee\": \"-\",\r\n        \"payperfee\": 0.00,\r\n        \"credit_card\": \"4555-4444-4444-8888\",\r\n        \"ccv\": \"441\",\r\n        \"expiration_date\": \"12/2025\",\r\n        \"state\": \"active\",\r\n        \"counter_transaction\": 0,\r\n        \"balance_day\": 0.00,\r\n        \"limit_transaction\": 0,\r\n        \"deposit_date\": \"-\",\r\n        \"payment_date\": \"-\",\r\n        \"count_overdue_installments\": 0,\r\n        \"bank_accounts\": [\r\n            {\r\n                \"account\": \"478547878457898223\",\r\n                \"inter_account\": \"00254787845789861221\"\r\n            },\r\n                        {\r\n                \"account\": \"478547878457894444\",\r\n                \"inter_account\": \"00254787845789864141\"\r\n            }\r\n        ]\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -670,7 +670,7 @@
 			"response": []
 		},
 		{
-			"name": "Registrar un depósito a una misma cuenta bancaria",
+			"name": "Registrar un depósito a si mismo.",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -825,6 +825,36 @@
 			"response": []
 		},
 		{
+			"name": "Registrar Yanqui",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileWallet\": {\r\n        \"doc_id\": \"78545555\",\r\n        \"movil\": \"987458666\",\r\n        \"imei\": \"456898eweasdsad45\",\r\n        \"email\": \"test2@gmail.com\",\r\n        \"cash\": 400.00,\r\n        \"iddetail\": \"-\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/wallet/v1/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"wallet",
+						"v1",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Registrar Yanqui con tarjeta de débito",
 			"request": {
 				"method": "POST",
@@ -861,7 +891,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"messageTransactWallet\": {\r\n        \"amount\": 1.00,\r\n        \"iddetail\": \"dc187e62-c29d-42f8-bf07-715dfd287ab2\",\r\n        \"number_destination\": \"\",\r\n        \"destination\": \"478547878457898787\"\r\n    },\r\n    \"id\": \"629a529f74ee1235bf71638d\",\r\n    \"doc_id\": \"78945612\",\r\n    \"movil\": \"987458545\",\r\n    \"imei\": \"456898eweasdsad45\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"cash\": 0.0,\r\n    \"type\": \"TCD\"\r\n}",
+					"raw": "{\r\n    \"messageTransactWallet\": {\r\n        \"amount\": 1.00,\r\n        \"iddetail\": \"dc187e62-c29d-42f8-bf07-715dfd287ab2\",\r\n        \"number_destination\": \"\",\r\n        \"destination\": \"478547878457898888\"\r\n    },\r\n    \"id\": \"629abe589b2b8116584999e9\",\r\n    \"doc_id\": \"78945612\",\r\n    \"movil\": \"987458545\",\r\n    \"imei\": \"456898eweasdsad45\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"cash\": 0.0,\r\n    \"type\": \"TCD\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -885,21 +915,33 @@
 			"response": []
 		},
 		{
-			"name": "Registrar Yanqui",
+			"name": "Listar yanquis redis",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"mobileWallet\": {\r\n        \"doc_id\": \"78545555\",\r\n        \"movil\": \"987458666\",\r\n        \"imei\": \"456898eweasdsad45\",\r\n        \"email\": \"test2@gmail.com\",\r\n        \"cash\": 400.00,\r\n        \"iddetail\": \"-\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:8088/wallet/v1/save",
+					"raw": "http://localhost:8077/bootcoin/v1/getwalletredis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8077",
+					"path": [
+						"bootcoin",
+						"v1",
+						"getwalletredis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar yanquis redis",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/wallet/v1/deletehistorymobilewallet/629abe589b2b8116584999e9",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -908,7 +950,98 @@
 					"path": [
 						"wallet",
 						"v1",
-						"save"
+						"deletehistorymobilewallet",
+						"629abe589b2b8116584999e9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar monedero bootcoin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bootcoin\": {\r\n        \"docid\": \"78945612\",\r\n        \"movil\": \"987458545\",\r\n        \"cash_bootcoin\": 4.00,\r\n        \"email\": \"test@gmail.com\",\r\n        \"permission_seller\": false\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8077/bootcoin/v1/savebootcoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8077",
+					"path": [
+						"bootcoin",
+						"v1",
+						"savebootcoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Solicitud de compra Bootcoin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"purchaseRequest\": {\r\n        \"amount\": 150.00,\r\n        \"payment_method\": \"yanqui\",\r\n        \"account_or_yanqui\": \"987458545\",\r\n        \"status\": \"open\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8077/bootcoin/v1/savepurchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8077",
+					"path": [
+						"bootcoin",
+						"v1",
+						"savepurchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transferencia Bootcoin entre un comprador y vendedor que poseen cuentas  yanqui",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transferBootcoin\": {\r\n        \"id_request\": \"629d32d3df8c4e647871747a\",\r\n        \"amount\": \"150.00\",\r\n        \"payment_method\": \"yanqui\",\r\n        \"account_or_yanqui\": \"987458545\",\r\n        \"account_seller\": \"478547878457898888\",\r\n        \"mobile_buyer\": \"987458545\",\r\n        \"number_seller\": \"987458333\",\r\n        \"permission_seller\": true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8077/bootcoin/v1/savetranfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8077",
+					"path": [
+						"bootcoin",
+						"v1",
+						"savetranfer"
 					]
 				}
 			},
